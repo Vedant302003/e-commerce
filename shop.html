@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All | Lumina Beauty</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header id="main-header" class="header"></header>
+
+    <!-- Cart Drawer Reuse -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header flex-between">
+            <h3>Your Bag (<span id="cart-count-header">0</span>)</h3>
+            <button id="close-cart" class="btn-icon"><i data-lucide="x"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="flex-between total-row">
+                <span>Subtotal</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="overlay"></div>
+
+    <main class="container">
+        <div class="section-header text-center" style="margin-top: 3rem;">
+            <h1>Shop All Products</h1>
+            <p>Curated beauty essentials for your daily ritual.</p>
+        </div>
+
+        <div class="shop-container">
+            <aside class="sidebar-filter">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <ul class="filter-list">
+                        <li class="active">All Products</li>
+                        <li>Skincare</li>
+                        <li>Makeup</li>
+                        <li>Fragrance</li>
+                        <li>Sets & Gifts</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <ul class="filter-list">
+                        <li>Under $25</li>
+                        <li>$25 - $50</li>
+                        <li>$50 - $100</li>
+                        <li>$100+</li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h3>Skin Concern</h3>
+                    <ul class="filter-list">
+                        <li>Dryness</li>
+                        <li>Acne & Blemishes</li>
+                        <li>Anti-Aging</li>
+                        <li>Dullness</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section id="shop-grid" class="grid product-grid">
+                <!-- Products injected by JS -->
+            </section>
+        </div>
+    </main>
+
+    <footer id="main-footer" class="footer"></footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
