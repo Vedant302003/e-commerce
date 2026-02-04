@@ -202,6 +202,7 @@ function renderWishlist() {
         const wishlistProducts = products.filter(p => wishlist.includes(p.id));
         wishlistGrid.innerHTML = wishlistProducts.map(createProductCard).join('');
     }
+    lucide.createIcons();
 }
 
 // --- Product Card Template ---
